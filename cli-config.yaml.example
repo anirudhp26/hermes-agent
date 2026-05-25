@@ -309,6 +309,22 @@ terminal:
 #   tirith_fail_open: true      # Allow commands if tirith unavailable
 
 # =============================================================================
+# Veto Policy Guard
+# =============================================================================
+# Optional tool-call policy checks via the Python `veto` SDK.
+# Enable the bundled plugin with: hermes plugins enable veto
+# Install the SDK in the Hermes environment with: pip install veto
+#
+# veto:
+#   enabled: false              # Set true to enforce even outside plugin hook paths
+#   config_dir: ""              # Empty = $HERMES_HOME/veto; set an absolute path to override
+#   validation_mode: "local"    # "local" YAML rules or "cloud" remote Veto PDP
+#   mode: "strict"              # "strict", "log", or "shadow"
+#   fail_open: false            # Production default: block if Veto is unavailable
+#   # endpoint: "http://localhost:8001"
+#   # api_key_env: "VETO_API_KEY"
+
+# =============================================================================
 # Browser Tool Configuration
 # =============================================================================
 browser:
